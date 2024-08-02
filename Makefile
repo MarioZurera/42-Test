@@ -51,13 +51,10 @@ $(NAME): $(OBJS)
 clean:
 	@$(RM_DIR) $(OBJ_DIR)
 	@$(RM_DIR) $(BUILD_DIR)
-	@make fclean -s -C $(LIB_DIR)
-	@make -s -C $(MLX_DIR)/build clean
 	@echo "$(C_RED)Cleaned objects folder!$(C_DEF)"
 
 fclean: clean
 	@$(RM) $(NAME)
-	@$(RM) $(LIBFT)
 	@echo "$(C_RED)Cleaned $(NAME) program!$(C_DEF)"
 
 re: fclean all
